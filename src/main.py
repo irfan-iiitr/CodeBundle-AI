@@ -88,7 +88,7 @@ def main():
         file_structure = generate_file_structure(app_name)
         create_folders_and_files(file_structure)
         zip_name = f"{app_name}_project.zip"
-        zip_directory("/", zip_name)
+        zip_directory("/project", zip_name)
         st.success("File structure generated successfully!")
         st.download_button(
             label="Download Project",
