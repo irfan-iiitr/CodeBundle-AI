@@ -25,7 +25,8 @@ def zip_directory(directory, zip_name):
                 zipf.write(file_path, os.path.relpath(file_path, directory))
 
 def generate_file_structure(app_name):
-    google_api_key = os.getenv("GOOGLE_API_KEY")
+    #google_api_key = os.getenv("GOOGLE_API_KEY")
+    google_api_key = st.secrets["GOOGLE_API_KEY"]
     genai.configure(api_key=google_api_key)
     model = genai.GenerativeModel('gemini-1.5-flash')
     app_js_content = """import React from 'react';function App(){return(<div><h1>Welcome to My App</h1><p>This is a sample content for the main App component.</p></div>);}export default App;"""
