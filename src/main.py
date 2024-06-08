@@ -25,8 +25,8 @@ def zip_directory(directory, zip_name):
                 zipf.write(file_path, os.path.relpath(file_path, directory))
 
 def generate_file_structure(app_name):
-    google_api_key = os.getenv("GOOGLE_API_KEY")
-    #google_api_key = st.secrets["GOOGLE_API_KEY"]
+    #google_api_key = os.getenv("GOOGLE_API_KEY")
+    google_api_key = st.secrets["GOOGLE_API_KEY"]
     genai.configure(api_key=google_api_key)
     model = genai.GenerativeModel('gemini-1.5-flash')
     index_html_content = """<!DOCTYPE html>\n<html lang='en'>\n<head>\n<meta charset='UTF-8'>\n<title>{app_name}</title>\n<link rel='stylesheet' href='styles.css'>\n</head>\n<body>\n<h1>Welcome to {app_name}</h1>\n</body>\n</html>""".format(app_name=app_name)
