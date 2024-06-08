@@ -51,7 +51,7 @@ Add every files necessary to create a project such that i have to just install t
             }}
         "index.html": "{index_html_content}",
         "styles.css": "{styles_css_content}",
-        "main.py": "{main_py_content}",
+        "app.py": "{main_py_content}",
         "utils.py": "{utils_py_content}",
         "requirements.txt": "{requirements_txt_content}",
         }}
@@ -60,10 +60,11 @@ Add every files necessary to create a project such that i have to just install t
 
 Please provide only file names  along with contents which is necessary to build {app_name}PYTHON  Project. Limit the number of files to 10. Avoid providing additional explanations or descriptions.
 """
-    print(prompt)
+    #print(prompt)
 
     response = model.generate_content(prompt)
     res = response.candidates[0].content.parts[0].text
+    print(res)
     
     # Extracting the text part from the response
     start_index = res.find("```")+ 7 # Index of the start of the text part
