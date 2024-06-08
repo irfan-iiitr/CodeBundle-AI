@@ -31,7 +31,7 @@ def generate_file_structure(app_name):
     model = genai.GenerativeModel('gemini-1.5-flash')
     index_html_content = """<!DOCTYPE html>\n<html lang='en'>\n<head>\n<meta charset='UTF-8'>\n<title>{app_name}</title>\n<link rel='stylesheet' href='styles.css'>\n</head>\n<body>\n<h1>Welcome to {app_name}</h1>\n</body>\n</html>""".format(app_name=app_name)
     styles_css_content = """body {\n  font-family: Arial, sans-serif;\n  background-color: #f0f0f0;\n}"""
-    main_py_content = "# Main Python file for the project"
+    app_py_content = "# Main Python file for the project"
     utils_py_content = "# Utility functions for common tasks"
     config_json_content = "{}"
     requirements_txt_content = "# List of Python dependencies\nflask==2.0.1\n"
@@ -51,7 +51,7 @@ Add every files necessary to create a project such that i have to just install t
             }}
         "index.html": "{index_html_content}",
         "styles.css": "{styles_css_content}",
-        "app.py": "{main_py_content}",
+        "app.py": "{app_py_content}",
         "utils.py": "{utils_py_content}",
         "requirements.txt": "{requirements_txt_content}",
         }}
