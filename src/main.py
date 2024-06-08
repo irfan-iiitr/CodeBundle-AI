@@ -51,7 +51,7 @@ Add every files necessary to create a project such that i have to just install t
             }}
         "index.html": "{index_html_content}",
         "styles.css": "{styles_css_content}",
-        "main.py": "{main_py_content}",
+        "app.py": "{main_py_content}",
         "utils.py": "{utils_py_content}",
         "requirements.txt": "{requirements_txt_content}",
         }}
