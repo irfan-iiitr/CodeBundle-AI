@@ -76,7 +76,7 @@ Please provide only file names  along with contents which is necessary to build 
 def main():
     st.title("App File Generator")
     app_name = st.text_input("Enter the name of the application")
-    if st.button("Generate File Structure"):
+    if st.button("Generate File"):
         file_structure = generate_file_structure(app_name)
         create_folders_and_files(file_structure)
         zip_name = f"{app_name}_project.zip"
